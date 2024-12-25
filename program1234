@@ -1,0 +1,889 @@
+#include <stdio.h>
+void add(int a[], int n)
+{
+    for(int i=0;i<n;i++)
+    {
+        int s;
+        s=+a[i];
+    }
+    printf("%d",s);
+}
+int main()
+{
+    int a[5];
+    printf("enter the array element");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    add(a[],5);
+    return 0;
+
+}
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("enter the size:");
+    scanf("%d",&n);
+    int a[n];
+    printf("enter array:");
+    for(int i=0;i<n-1;i++)
+    {
+        scanf("%d\n",&a[i]);
+    }
+    printf("print array:");
+    for(int i=0;i<n-1;i++)
+    {
+        printf("%d\n",a[i]);
+    }
+    return 0;
+}
+#include<stdio.h>
+void printNum(int a[],int n)
+{   
+  
+
+    for(int i=0;i<n;i++)
+    {
+        printf("%d",a[i]);
+    }
+}
+int main()
+{
+    int a[5];
+    printf("enter the array element");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+
+    
+    printNum( a,5);
+    
+    return 0;
+}
+#include<stdio.h>
+int main()
+{
+    int a[5];//={1,2,3,4,5};
+    int*p=&a[0];
+    printf("xy:");
+    for(int i=0;i<5;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("litrelillahyhvhf");
+    for(int i=0;i<5;i++)
+    {
+        printf("%d",(*p+i));
+    }
+}
+#include<stdio.h>
+    void tower(int n, char from_rod, char to_rod, char aux_rod,int k) 
+{   
+     k=1;
+   
+    if (n == 1) {
+        k++;
+        printf("\n  %d:Move disk 1 from rod %c to rod %c",k, from_rod, to_rod);
+        return;
+    }
+    tower(n - 1, from_rod, aux_rod, to_rod,k++);
+    printf("\n %d:Move disk %d from rod %c to rod %c",k, n, from_rod, to_rod);
+    tower(n - 1, aux_rod, to_rod, from_rod,k++);
+    
+
+}
+int main() {
+    int n;
+    printf("Enter the number of disks: ");
+    scanf("%d", &n);
+    tower(n, 'A','C', 'B',1);
+    return 0;
+}
+#include<stdio.h>
+#include <stdlib.h>
+int main()
+{   
+    int n=5;
+    int *a=(int *)malloc(n*sizeof(int));
+    for(int i=0;i<n;i++)
+    {
+        scanf("%p",&a[i]);
+    }
+    for(int i=0;i<n;i++)
+    {
+        printf("%p\n",a[i]);
+    }
+
+}
+#include<stdio.h>
+int main()
+{   
+    int x,i,j,k;
+    
+    
+       
+        for(j=0;j<5;j++)
+        {
+            for(k=0;k<j;k++)
+            {
+                for(i=0;i<10;i++)
+                {
+                    x=i*3;
+                    printf("%d",x);
+                }
+            }
+            printf("\n");
+        }
+    
+}
+#include<stdio.h>
+int main()
+{
+    char s[10];
+    printf("enter the char string:\n");
+    for(int i=0;i<10;i++)
+    {
+        scanf("%s",s[i]);
+    }
+     printf("entered  char string:\n");
+    for(int i=0;i<10;i++)
+    {
+        printf("%s",s[i]);
+    }
+    return 0;
+
+}
+#include<stdio.h>
+#include<stdlib.h>
+#define  n 5
+ int s[n];
+ int t=-1;
+int isempty()
+{
+    return t==-1;
+}
+int isfull()
+
+{
+   return t==n-1;
+}
+void push(int e)
+{
+    if(isfull())
+    {
+        printf("stack over flow!\n");
+        return;
+    }
+    s[++t]=e;
+}
+int pop()
+{
+    if(isempty())
+    {
+        printf("stack under flow!\n");
+        // return;
+    }
+    return s[t--];
+}
+int peek()
+{
+
+    if(isempty())
+    {
+        printf("stack under flow!\n");
+        // return;
+    }
+    return s[t];
+}
+int main()
+{
+    int ch,e;
+    for(;;)
+    {
+        printf("enter the choice:\t1\t2\t3\t4\n");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1:
+            printf("enter the element to push into the stack:\n");
+            scanf("%d",&e);
+            push(e);
+            break;
+            case 2:
+            e=pop();
+            if(e!=-1)
+            {
+                printf("poped element :%d\n",e);
+            }
+            break;
+            case 3:
+            e=peek();
+             if(e!=-1)
+            {
+                printf("peek  element :%d\n",e);
+            }
+            break;
+            case 4:
+            exit(0);
+            default :
+            printf("INVALID CHOICE!\n");
+        }
+    }
+    return 0;
+}
+#include<stdio.h>
+int passval(int a,int b)
+{
+    int temp;
+    temp=a;
+    a=b;
+    b=temp;
+    printf("%d\t%d",a,b);
+    
+
+}
+int main()
+{   
+    int x=10;
+    int y=20;
+    passval(x,y);
+    
+    return 0;
+}
+class vowel
+{
+    public static void main(String args[])
+    {
+        char z="a";
+        if (z="a"||z="e"||z="i"||z="o"||z="u")
+        {
+            System.out.println("the character is vowel");
+        }
+        else 
+        {
+             System.out.println("the character is consonant or a special char");
+        }
+        
+    }
+}
+class Pattern
+{
+	public static void main(String arg[])
+	{
+		for(int i=1;i<5;i++)
+		{
+			for(int j=1;j<i+1;j++)
+			{
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+public class P1 {
+    public static void main(String[] args) {
+        int n=6;
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=n-i;j++){
+                System.out.print("#");
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+}
+// Source code is decompiled from a .class file using FernFlower decompiler.
+class agb2 {
+   agb2() {
+   }
+
+   public static void main(String[] args) {
+      int a = 10;
+      int b = 20;
+      int res = a > b ? a : b;
+      System.out.println("the larger num is :" + res);
+   }
+}
+// Source code is decompiled from a .class file using FernFlower decompiler.
+class div {
+   div() {
+   }
+
+   public static void main(String[] var0) {
+      byte var1 = 78;
+      if (var1 % 4 == 0) {
+         System.out.println("the number is divisible by four");
+      } else {
+         System.out.println("the number is not  divisible by four");
+      }
+
+   }
+}
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("enter the size of array:");
+    scanf("%d",&n);
+    int a[n];
+    printf("enter the elements of array:\n");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int p;
+    printf("enter  the postion at which it should be deleted : ");
+    scanf("\n%d",&p);
+    if(0>p||n<=p)
+    {
+        printf("cant be deleted !\n");
+    }
+    else
+    {
+        for(int i=p;i<n-1;i++)
+        {
+            a[i]=a[i+1];
+        }
+       
+        n--;
+
+    }
+    printf("Resultant array:\n");
+    for(int i=0;i<n;i++)
+    {
+        printf("%d\t",a[i]);
+    }
+    return 0;
+}
+1
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> m = new HashMap<>();
+        for (int i = 0;; ++i) {
+            int x = nums[i];
+            int y = target - x;
+            if (m.containsKey(y)) {
+                return new int[] {m.get(y), i};
+            }
+            m.put(x, i);
+        }
+    }
+}
+2
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        
+    }
+};
+3
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        unordered_set<char> ss;  // Set to store the characters in the current window
+        int i = 0, ans = 0;  // `i` is the starting index of the window, `ans` holds the result
+        for (int j = 0; j < s.size(); ++j) {  // `j` iterates over the string
+            // If the character at s[j] is already in the set, we shrink the window from the left
+            while (ss.count(s[j])) ss.erase(s[i++]);
+            // Add the current character to the set
+            ss.insert(s[j]);
+            // Update the maximum length of the substring found so far
+            ans = max(ans, j - i + 1);
+        }
+        return ans;  // Return the length of the longest substring found
+    }
+};
+4
+class Solution {
+    private int m;
+    private int n;
+    private int[] nums1;
+    private int[] nums2;
+
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        m = nums1.length;
+        n = nums2.length;
+        this.nums1 = nums1;
+        this.nums2 = nums2;
+        int a = f(0, 0, (m + n + 1) / 2);
+        int b = f(0, 0, (m + n + 2) / 2);
+        return (a + b) / 2.0;
+    }
+
+    private int f(int i, int j, int k) {
+        if (i >= m) {
+            return nums2[j + k - 1];
+        }
+        if (j >= n) {
+            return nums1[i + k - 1];
+        }
+        if (k == 1) {
+            return Math.min(nums1[i], nums2[j]);
+        }
+        int p = k / 2;
+        int x = i + p - 1 < m ? nums1[i + p - 1] : 1 << 30;
+        int y = j + p - 1 < n ? nums2[j + p - 1] : 1 << 30;
+        return x < y ? f(i + p, j, k - p) : f(i, j + p, k - p);
+    }
+}
+
+5
+class Solution {
+    public String longestPalindrome(String s) {
+        int n = s.length();
+        boolean[][] f = new boolean[n][n];
+        for (var g : f) {
+            Arrays.fill(g, true);
+        }
+        int k = 0, mx = 1;
+        for (int i = n - 2; i >= 0; --i) {
+            for (int j = i + 1; j < n; ++j) {
+                f[i][j] = false;
+                if (s.charAt(i) == s.charAt(j)) {
+                    f[i][j] = f[i + 1][j - 1];
+                    if (f[i][j] && mx < j - i + 1) {
+                        mx = j - i + 1;
+                        k = i;
+                    }
+                }
+            }
+        }
+        return s.substring(k, k + mx);
+    }
+}
+6
+var convert = function (s, numRows) {
+    if (numRows == 1) return s;
+    let arr = new Array(numRows);
+    for (let i = 0; i < numRows; i++) arr[i] = [];
+    let mi = 0,
+        isDown = true;
+    for (const c of s) {
+        arr[mi].push(c);
+
+        if (mi >= numRows - 1) isDown = false;
+        else if (mi <= 0) isDown = true;
+
+        if (isDown) mi++;
+        else mi--;
+    }
+    let ans = [];
+    for (let item of arr) {
+        ans = ans.concat(item);
+    }
+    return ans.join('');
+};
+
+
+7
+class Solution {
+    public int reverse(int x) {
+        int ans = 0;
+        for (; x != 0; x /= 10) {
+            if (ans < Integer.MIN_VALUE / 10 || ans > Integer.MAX_VALUE / 10) {
+                return 0;
+            }
+            ans = ans * 10 + x % 10;
+        }
+        return ans;
+    }
+}
+9
+class Solution {
+    public boolean isPalindrome(int x) {
+        if (x < 0 || (x > 0 && x % 10 == 0)) {
+            return false;
+        }
+        int y = 0;
+        for (; y < x; x /= 10) {
+            y = y * 10 + x % 10;
+        }
+        return x == y || x == y / 10;
+    }
+}
+10
+class Solution {
+    public boolean isMatch(String s, String p) {
+        int m = s.length(), n = p.length();
+        boolean[][] f = new boolean[m + 1][n + 1];
+        f[0][0] = true;
+        for (int i = 0; i <= m; ++i) {
+            for (int j = 1; j <= n; ++j) {
+                if (p.charAt(j - 1) == '*') {
+                    f[i][j] = f[i][j - 2];
+                    if (i > 0 && (p.charAt(j - 2) == '.' || p.charAt(j - 2) == s.charAt(i - 1))) {
+                        f[i][j] |= f[i - 1][j];
+                    }
+                } else if (i > 0
+                    && (p.charAt(j - 1) == '.' || p.charAt(j - 1) == s.charAt(i - 1))) {
+                    f[i][j] = f[i - 1][j - 1];
+                }
+            }
+        }
+        return f[m][n];
+    }
+}
+
+11
+class Solution {
+    public int maxArea(int[] height) {
+        int i = 0, j = height.length - 1;
+        int ans = 0;
+        while (i < j) {
+            int t = Math.min(height[i], height[j]) * (j - i);
+            ans = Math.max(ans, t);
+            if (height[i] < height[j]) {
+                ++i;
+            } else {
+                --j;
+            }
+        }
+        return ans;
+    }
+}
+12
+class Solution {
+    public String intToRoman(int num) {
+        List<String> cs
+            = List.of("M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I");
+        List<Integer> vs = List.of(1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1);
+        StringBuilder ans = new StringBuilder();
+        for (int i = 0, n = cs.size(); i < n; ++i) {
+            while (num >= vs.get(i)) {
+                num -= vs.get(i);
+                ans.append(cs.get(i));
+            }
+        }
+        return ans.toString();
+    }
+}
+13
+class Solution {
+    public int romanToInt(String s) {
+        String cs = "IVXLCDM";
+        int[] vs = {1, 5, 10, 50, 100, 500, 1000};
+        Map<Character, Integer> d = new HashMap<>();
+        for (int i = 0; i < vs.length; ++i) {
+            d.put(cs.charAt(i), vs[i]);
+        }
+        int n = s.length();
+        int ans = d.get(s.charAt(n - 1));
+        for (int i = 0; i < n - 1; ++i) {
+            int sign = d.get(s.charAt(i)) < d.get(s.charAt(i + 1)) ? -1 : 1;
+            ans += sign * d.get(s.charAt(i));
+        }
+        return ans;
+    }
+}
+14
+class Solution {
+    public String longestCommonPrefix(String[] strs) {
+        int n = strs.length;
+        for (int i = 0; i < strs[0].length(); ++i) {
+            for (int j = 1; j < n; ++j) {
+                if (strs[j].length() <= i || strs[j].charAt(i) != strs[0].charAt(i)) {
+                    return strs[0].substring(0, i);
+                }
+            }
+        }
+        return strs[0];
+    }
+}
+15
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        Arrays.sort(nums);
+        List<List<Integer>> ans = new ArrayList<>();
+        int n = nums.length;
+        for (int i = 0; i < n - 2 && nums[i] <= 0; ++i) {
+            if (i > 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            int j = i + 1, k = n - 1;
+            while (j < k) {
+                int x = nums[i] + nums[j] + nums[k];
+                if (x < 0) {
+                    ++j;
+                } else if (x > 0) {
+                    --k;
+                } else {
+                    ans.add(List.of(nums[i], nums[j++], nums[k--]));
+                    while (j < k && nums[j] == nums[j - 1]) {
+                        ++j;
+                    }
+                    while (j < k && nums[k] == nums[k + 1]) {
+                        --k;
+                    }
+                }
+            }
+        }
+        return ans;
+    }
+}
+16
+class Solution {
+    public int threeSumClosest(int[] nums, int target) {
+        Arrays.sort(nums);
+        int ans = 1 << 30;
+        int n = nums.length;
+        for (int i = 0; i < n; ++i) {
+            int j = i + 1, k = n - 1;
+            while (j < k) {
+                int t = nums[i] + nums[j] + nums[k];
+                if (t == target) {
+                    return t;
+                }
+                if (Math.abs(t - target) < Math.abs(ans - target)) {
+                    ans = t;
+                }
+                if (t > target) {
+                    --k;
+                } else {
+                    ++j;
+                }
+            }
+        }
+        return ans;
+    }
+}
+
+17
+class Solution {
+    public List<String> letterCombinations(String digits) {
+        List<String> ans = new ArrayList<>();
+        if (digits.length() == 0) {
+            return ans;
+        }
+        ans.add("");
+        String[] d = new String[] {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        for (char i : digits.toCharArray()) {
+            String s = d[i - '2'];
+            List<String> t = new ArrayList<>();
+            for (String a : ans) {
+                for (String b : s.split("")) {
+                    t.add(a + b);
+                }
+            }
+            ans = t;
+        }
+        return ans;
+    }
+}
+18
+var fourSum = function(nums, target) {
+    let result = [];
+    
+    // Sort the array first to apply the two-pointer technique
+    nums.sort((a, b) => a - b);
+    
+    for (let i = 0; i < nums.length - 3; i++) {
+        // Skip duplicate elements for the first number
+        if (i > 0 && nums[i] === nums[i - 1]) continue;
+        
+        for (let j = i + 1; j < nums.length - 2; j++) {
+            // Skip duplicate elements for the second number
+            if (j > i + 1 && nums[j] === nums[j - 1]) continue;
+            
+            let left = j + 1, right = nums.length - 1;
+            
+            while (left < right) {
+                let sum = nums[i] + nums[j] + nums[left] + nums[right];
+                
+                if (sum === target) {
+                    // If we find a valid quadruplet, add it to the result
+                    result.push([nums[i], nums[j], nums[left], nums[right]]);
+                    
+                    // Skip duplicates for the third number (left pointer)
+                    while (left < right && nums[left] === nums[left + 1]) left++;
+                    
+                    // Skip duplicates for the fourth number (right pointer)
+                    while (left < right && nums[right] === nums[right - 1]) right--;
+                    
+                    // Move both pointers
+                    left++;
+                    right--;
+                } else if (sum < target) {
+                    // If the sum is less than target, move the left pointer to the right
+                    left++;
+                } else {
+                    // If the sum is greater than target, move the right pointer to the left
+                    right--;
+                }
+            }
+        }
+    }
+    
+    return result;
+};
+19
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode dummy = new ListNode(0, head);
+        ListNode fast = dummy, slow = dummy;
+        while (n-- > 0) {
+            fast = fast.next;
+        }
+        while (fast.next != null) {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        slow.next = slow.next.next;
+        return dummy.next;
+    }
+}
+20
+class Solution {
+    public boolean isValid(String s) {
+        Deque<Character> stk = new ArrayDeque<>();
+        for (char c : s.toCharArray()) {
+            if (c == '(' || c == '{' || c == '[') {
+                stk.push(c);
+            } else if (stk.isEmpty() || !match(stk.pop(), c)) {
+                return false;
+            }
+        }
+        return stk.isEmpty();
+    }
+
+    private boolean match(char l, char r) {
+        return (l == '(' && r == ')') || (l == '{' && r == '}') || (l == '[' && r == ']');
+    }
+}
+21
+class Solution {
+    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        ListNode dummy = new ListNode();
+        ListNode curr = dummy;
+        while (list1 != null && list2 != null) {
+            if (list1.val <= list2.val) {
+                curr.next = list1;
+                list1 = list1.next;
+            } else {
+                curr.next = list2;
+                list2 = list2.next;
+            }
+            curr = curr.next;
+        }
+        curr.next = list1 == null ? list2 : list1;
+        return dummy.next;
+    }
+}
+22
+class Solution {
+    private List<String> ans = new ArrayList<>();
+    private int n;
+
+    public List<String> generateParenthesis(int n) {
+        this.n = n;
+        dfs(0, 0, "");
+        return ans;
+    }
+
+    private void dfs(int l, int r, String t) {
+        if (l > n || r > n || l < r) {
+            return;
+        }
+        if (l == n && r == n) {
+            ans.add(t);
+            return;
+        }
+        dfs(l + 1, r, t + "(");
+        dfs(l, r + 1, t + ")");
+    }
+}
+23
+var mergeKLists = function (lists) {
+    const n = lists.length;
+    if (n == 0) {
+        return null;
+    }
+    for (let i = 1; i < n; ++i) {
+        lists[i] = mergeTwoLists(lists[i - 1], lists[i]);
+    }
+    return lists[n - 1];
+};
+
+function mergeTwoLists(l1, l2) {
+    const dummy = new ListNode();
+    let cur = dummy;
+    while (l1 && l2) {
+        if (l1.val <= l2.val) {
+            cur.next = l1;
+            l1 = l1.next;
+        } else {
+            cur.next = l2;
+            l2 = l2.next;
+        }
+        cur = cur.next;
+    }
+    cur.next = l1 || l2;
+    return dummy.next;
+}
+
+24
+class Solution {
+    public ListNode swapPairs(ListNode head) {
+        ListNode dummy = new ListNode(0, head);
+        ListNode pre = dummy;
+        ListNode cur = head;
+        while (cur != null && cur.next != null) {
+            ListNode t = cur.next;
+            cur.next = t.next;
+            t.next = cur;
+            pre.next = t;
+            pre = cur;
+            cur = cur.next;
+        }
+        return dummy.next;
+    }
+}
+25
+class Solution {
+public:
+    ListNode* reverseKGroup(ListNode* head, int k) {
+        ListNode h, *tail = &h;
+        while (head) {
+            auto prev = tail;
+            int i = 0;
+            for (auto p = head; i < k && p; ++i, p = p->next);
+            if (i < k) {
+                tail->next = head;
+                break;
+            }
+            for (int i = 0; i < k && head; ++i) {
+                auto node = head;
+                head = head->next;
+                node->next = prev->next;
+                prev->next = node;
+            }
+            while (tail->next) tail = tail->next;
+        }
+        return h.next;
+    }
+};
+26
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int k = 0;
+        for (int x : nums) {
+            if (k == 0 || x != nums[k - 1]) {
+                nums[k++] = x;
+            }
+        }
+        return k;
+    }
+}
